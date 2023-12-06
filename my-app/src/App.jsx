@@ -1,17 +1,11 @@
-// import { Hello } from "./Hello";
 
 import { Welcome } from "./Welcome";
 
 export function App (){
-    return(
+    return (
         <div>
-
-           <Welcome name="Luigi" age ={54}/>
-           
-           
-           </div>   
-    )
-
-       
+          <Welcome name="Luigi" age={54} />
+        </div>
+      );
+    }
     
-}

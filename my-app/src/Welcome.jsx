@@ -1,9 +1,10 @@
-export function Welcome({name,age}){
-    return (<div>
-        <p>Welcome, <strong>{name}</strong></p>
-        <p>You age is {age}</p>
-        
-        </div>
+import { Age } from "./Age"
 
-    )
-}
+export function Welcome({ name, age }){
+    return (
+      <div>
+        <p>Welcome, {name}!</p>
+        <Age age={age} />
+      </div>
+    );
+  };
