@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import { CounterDisplay } from "./CounterDisplay";
+
+
 export function Counter({initialValue= 0 }){
 
 
@@ -16,7 +19,7 @@ export function Counter({initialValue= 0 }){
     }
     return (
         <div>
-            <h2>the counter: {counter}</h2>
+             <CounterDisplay count={counter} />
             <Button onClick={Increment}label="Increment"/>
             <Button onClick={Decrement}label="Decrement"/>
             <Button onClick={Reset}label="Reset"/>
@@ -24,6 +27,3 @@ export function Counter({initialValue= 0 }){
         </div>
     )
 }
-
-// Quando si chiama la funzione "setter" per incrementare il contatore, il parametro deve essere una funzione o un valore immediato? Perché?
-// il parametro deve essere una funzione perchè è di valore asincrona 

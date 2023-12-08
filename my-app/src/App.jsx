@@ -5,7 +5,7 @@ export function App (){
         <div>
         
                 
-            <Counter />
+        <Counter/>
            
         </div>
     )
