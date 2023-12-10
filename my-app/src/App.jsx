@@ -1,10 +1,11 @@
-import { Hello } from "./Hello";
+
+import { MouseClicker } from "./MouseClicker";
 
 export function App (){
     return(
         <div>
         
-                 <Hello />
+                <MouseClicker/>
             
            
         </div>
