@@ -8,7 +8,7 @@ export function MouseClicker(){
 
     function ClickImage(event) {
         console.log(event.currentTarget.src);
-        event.stopPropagation(); // Impedisce la propagazione dell'evento al pulsante
+        event.stopPropagation(); // Impedisce la propagazione dell'evento al pulsante   
     }
     return(
         
