@@ -1,10 +1,13 @@
-import { Hello } from "./Hello";
+import { InteractiveWelcome } from "./InteractiveWelcome";
+
 
 export function App (){
+
     return(
         <div>
         
-                 <Hello />
+             
+              <InteractiveWelcome/>
             
            
         </div>
