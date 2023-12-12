@@ -2,8 +2,15 @@ import { useEffect, useRef } from "react";
 
 export function FocusableInput() {
   
-const inputRef=useRef(null)
+    const inputRef=useRef(null)
+    const mountedRef= useRef(false)
     useEffect(()=>{
+      if(!mountedRef.current){
+        mountedRef.current=true
+        console.log("E' stato montato per la prima volta");
+      }else{
+        console.log("Montato di nuovo per il debug")
+      }
       inputRef.current?.focus()
     },[])
 
@@ -11,9 +18,6 @@ const inputRef=useRef(null)
 
 
 
-
-
-    
   function handleFormSubmit(event) {
     event.preventDefault();
 

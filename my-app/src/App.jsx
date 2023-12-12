@@ -1,11 +1,16 @@
 
+import { StrictMode } from "react";
 import { FocusableInput} from "./FocusableInput";
 
 export function App (){
     return(
         <div>
-        
-           <FocusableInput/>
+            <StrictMode>
+
+                <FocusableInput/>
+
+            </StrictMode>
+         
             
            
         </div>
