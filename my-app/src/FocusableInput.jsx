@@ -1,6 +1,23 @@
-export function UncontrolledForm() {
+import { useEffect, useRef } from "react";
+
+export function FocusableInput() {
+  
+const inputRef=useRef(null)
+    useEffect(()=>{
+      inputRef.current?.focus()
+    },[])
+
+
+
+
+
+
+
+    
   function handleFormSubmit(event) {
     event.preventDefault();
+
+    
 
     const formData= new FormData(event.target)
 
@@ -14,7 +31,7 @@ export function UncontrolledForm() {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <input name="username" />
+      <input ref={inputRef} name="username" />
       <input name="password" type="password" />
       <input name="session" type="checkbox" />
       <button>Login</button>
@@ -23,6 +40,3 @@ export function UncontrolledForm() {
   );
 }
 
-// Tentare di accedere ai valori del modulo utilizzando l' FormDataAPI. Quali sono i vantaggi? Quali sono gli svantaggi?
-// I vantaggi sono che il codice è molto piu leggibile, estraiamo i valori del form in modo piu diretto , sembra che ha un utilizzo più semplice.
-// Gli svantaggi è che non è supportato nei browser più vecchi e  non ha tutte le forme di validazione
