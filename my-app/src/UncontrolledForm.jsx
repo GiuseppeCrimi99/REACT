@@ -2,14 +2,12 @@ export function UncontrolledForm() {
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    const username = event.target.elements.namedItem("username").value;
-    const password = event.target.elements.namedItem("password").value;
-    const session = event.target.elements.namedItem("session").checked;
+    const formData= new FormData(event.target)
 
     const data = {
-      username,
-      password,
-      session,
+      username: formData.get("username"),
+      password: formData.get("password"),
+      session:  formData.get("session"),         //on or null va bene comunque? 
     };
     console.log(data);
   }
@@ -24,3 +22,7 @@ export function UncontrolledForm() {
     </form>
   );
 }
+
+// Tentare di accedere ai valori del modulo utilizzando l' FormDataAPI. Quali sono i vantaggi? Quali sono gli svantaggi?
+// I vantaggi sono che il codice è molto piu leggibile, estraiamo i valori del form in modo piu diretto , sembra che ha un utilizzo più semplice.
+// Gli svantaggi è che non è supportato nei browser più vecchi e  non ha tutte le forme di validazione
