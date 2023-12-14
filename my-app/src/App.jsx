@@ -1,12 +1,12 @@
-import { Hello } from "./Hello";
+import React from 'react';
+import Colors from './Colors';
 
-export function App (){
-    return(
-        <div>
-        
-                 <Hello />
-            
-           
-        </div>
-    )
-}
+const App = () => {
+  const colors = [
+    { id: 1, name: 'Red' },
+  ];
+
+  return <Colors colors={colors} />;
+};
+
+export default App;
