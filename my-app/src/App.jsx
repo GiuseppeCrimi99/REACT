@@ -1,12 +1,12 @@
 import React from 'react';
-import Colors from './Colors';
+import TodoList from './TodoList';
 
 const App = () => {
-  const colors = [
-    { id: 1, name: 'Red' },
-  ];
-
-  return <Colors colors={colors} />;
+  return (
+    <div>
+      <TodoList />
+    </div>
+  );
 };
 
 export default App;
