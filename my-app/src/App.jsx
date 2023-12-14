@@ -1,14 +1,13 @@
-
+import { Counter } from "./Counter";
 import { StrictMode } from "react";
-import { FocusableInput} from "./FocusableInput";
+
 
 export function App (){
     return(
         <div>
             <StrictMode>
 
-                <FocusableInput/>
-
+                <Counter/>
             </StrictMode>
          
             
