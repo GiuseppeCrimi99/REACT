@@ -1,11 +1,10 @@
-import { Hello } from "./Hello";
+import Counter from "./Counter";
+
 
 export function App (){
     return(
         <div>
-        
-                 <Hello />
-            
+        <Counter/>
            
         </div>
     )
