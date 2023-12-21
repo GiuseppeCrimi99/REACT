@@ -1,10 +1,10 @@
-import Counter from "./Counter";
+import Input from "./Input"
 
 
 export function App (){
     return(
         <div>
-        <Counter/>
+       <Input/>
            
         </div>
     )
