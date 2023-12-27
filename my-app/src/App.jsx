@@ -1,3 +1,4 @@
+import CurrentLocation from "./CurrentLocation";
 import GithubUser from "./GithubUser";
 
 export function App (){
@@ -7,7 +8,7 @@ export function App (){
     return(
         <div>
           
-           <GithubUser username="GiuseppeCrimi99"/>
+           <CurrentLocation/>
            
         </div>
     )
