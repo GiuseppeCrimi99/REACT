@@ -1,14 +1,19 @@
-import GithubUser from "./GithubUser";
-
+import React from "react";
+import {Routes,Route} from "react-router-dom"
+import ShowGithubUser from "./ShowGithubUser";
+import Home from "./Home";
 export function App (){
   
 
 
     return(
         <div>
+          <Routes>
+            <Route path="/"element={<Home/>}/>
+          <Route path="/:username" element={<ShowGithubUser />} />
+          </Routes>
           
-           <GithubUser username="GiuseppeCrimi99"/>
-           
+           {/* ---> /:username per vedere il nome utente di github */}
         </div>
     )
 }
