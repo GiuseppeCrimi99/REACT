@@ -10,6 +10,7 @@ export function App (){
     return(
         <div>
         <Routes>
+            <Route path="*" element={<div><p>Page Not Found</p></div>}/>
            <Route path="/"element={<Hello />}/>
            <Route path="link1"element={<Link1/>}/>
            <Route path="link2"element={<Link2/>}/>
