@@ -1,11 +1,12 @@
-// import { Hello } from "./Hello";
-
+import { Route, Routes } from "react-router-dom";
 import { Welcome } from "./Welcome";
 
-export function App (){
-    return <Welcome name="Luigi"/>        
-
-    // What happens if no name prop is passed to the Welcome component? Can you set a default value for the name prop?
-    // Non stamperà nulla nel nostro HTML, ma se avessimo impostato un valore predefinito ad esempio "Guest" stampera Guest come output
-    
+export function App() {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Welcome name={"Giuseppe"} />} />
+      </Routes>
+    </div>
+  );
 }
